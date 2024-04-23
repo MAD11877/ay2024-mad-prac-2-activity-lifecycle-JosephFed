@@ -39,10 +39,12 @@ public class MainActivity extends AppCompatActivity {
         btnFollow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Change to follow is user is unfollowing
                 if (user.followed){
                     btnFollow.setText("FOLLOW");
                     user.followed = false;
                 }
+                //Change to unfollow is user is following
                 else if (!user.followed) {
                     btnFollow.setText("UNFOLLOW");
                     user.followed = true;
